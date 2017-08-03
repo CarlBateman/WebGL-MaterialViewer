@@ -13,8 +13,8 @@
   lightTypes["hemi"] = BABYLON.HemisphericLight;
   lightTypes["dir"] = BABYLON.DirectionalLight;
 
-  var lightDefaults = [];
-  lightDefaults["spot"] =  [new BABYLON.Vector3(0, 30, -10), new BABYLON.Vector3(0, -1, 0), 0.8, 2];
+  var lightDefaults = [];   //position, direction, angle, exponent
+  lightDefaults["spot"] =  [new BABYLON.Vector3(0, 30, -10), new BABYLON.Vector3(0, -1, 0), 0.872, 2];
   lightDefaults["point"] = [new BABYLON.Vector3(0, 1, 0)];
   lightDefaults["hemi"] =  [new BABYLON.Vector3(0, 1, 0)];
   lightDefaults["dir"] =   [new BABYLON.Vector3(0, 1, 0)];
@@ -154,6 +154,7 @@
       material.ambientColor = new BABYLON.Color3(...materialValue.ambient);
       material.diffuseColor = new BABYLON.Color3(...materialValue.diffuse);
       material.specularColor = new BABYLON.Color3(...materialValue.specular);
+      material.specularPower *= .25;
       material.emissiveColor = new BABYLON.Color3(...materialValue.emissive);
       mesh.material = material;
 
@@ -165,6 +166,7 @@
     if (type in lightTypes) {
       var light = new lightTypes[type](type + "light", ...lightDefaults[type], scene);
 
+      light.intensity = 2;
       light.position = new BABYLON.Vector3(...item.position);
       light.cb_tag = type;
 

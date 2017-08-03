@@ -3,7 +3,7 @@
 function makeScene() {
   return {
     background: [0.4, 0.7, 1],
-    ambient: [1, .1, .1, 1],
+    ambient: [.1, .1, .2, 1],
     skybox: "",
     lights: [],
     meshes: [],

@@ -14,8 +14,8 @@
   lightTypes["hemi"] = THREE.HemisphericLight;
   lightTypes["dir"] = THREE.DirectionalLight;
 
-  var lightDefaults = [];
-  lightDefaults["spot"] = [0xffffff];
+  var lightDefaults = []; // color, intensity, distance, angle, penumbra, decay
+  lightDefaults["spot"] = [0xffffff, 2, 200, 0.436];
   lightDefaults["point"] = [0xffffff];
   lightDefaults["hemi"] = [0xffffff];
   lightDefaults["dir"] = [0xffffff];

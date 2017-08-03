@@ -15,7 +15,7 @@
   lightTypes["dir"] =  "";
 
   var lightDefaults = [];
-  lightDefaults["spot"] = [1, 1, 1];
+  lightDefaults["spot"] = { type: "spot", color: new pc.Color(1, 1, 1), range: 200, intensity: 2, innerConeAngle: 25, outerConeAngle : 25};
   lightDefaults["point"] = [1, 1, 1];
   lightDefaults["dir"] = [1, 1, 1];
 
@@ -138,9 +138,10 @@
         var yaw = camera.script.orbitCamera._calcYaw(cameraQuat);
         var pitch = camera.script.orbitCamera._calcPitch(cameraQuat, yaw);
 
-        camera.script.orbitCamera.pitch = pitch;//sceneGeneric.cameraRot[0];
-        camera.script.orbitCamera.yaw = yaw;//sceneGeneric.cameraRot[2];
-        camera.script.orbitCamera._removeInertia();
+        // to do - respect orientation
+        //camera.script.orbitCamera.pitch = pitch;//sceneGeneric.cameraRot[0];
+        //camera.script.orbitCamera.yaw = yaw;//sceneGeneric.cameraRot[2];
+        //camera.script.orbitCamera._removeInertia();
 
         camera.script.orbitCamera.pivotPoint.x = sceneGeneric.cameraTarget[0];
         camera.script.orbitCamera.pivotPoint.y = sceneGeneric.cameraTarget[1];
@@ -203,12 +204,7 @@
 
     if (type in lightTypes) {
       var light = new pc.Entity('light');
-      light.addComponent('light', {
-        type: type,
-        color: new pc.Color(...lightDefaults[type]),
-        range: 200,
-        intensity: 2,
-      });
+      light.addComponent('light', lightDefaults[type]);
       light.setLocalPosition(...item.position);
       app.root.addChild(light);
 
