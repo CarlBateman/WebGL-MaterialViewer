@@ -1,0 +1,40 @@
+﻿Material Explorer
+
+APIs too different to allow straight switching
+adaptors require a lot of work
+some propoerties don't exist, completely different defaults, etc.
+
+
+Control
+	Add
+	Position
+	Orient
+	Change
+
+Material
+	Emissive
+	Diffuse
+	Ambient
+	Specular
+	Normals
+	Metalness
+	Reflectivity
+
+	Physical based rendering
+
+Light
+	Ambient
+
+Effects
+	Erode/scratches
+	Tarnish
+	Algae
+	Water stain
+
+Samples/target
+	Granite
+
+Server/db
+	Store settings
+	Materials
+	Scene
