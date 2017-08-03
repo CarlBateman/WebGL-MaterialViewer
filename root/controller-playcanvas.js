@@ -1,7 +1,4 @@
-﻿/// <reference path="../../libs/playcanvas/playcanvas.js" />
-/// <reference path="scene.js" />
-
-function makePlayCanvasController(sceneGeneric) {
+﻿function makePlayCanvasController(sceneGeneric) {
   var glCanvas;
   var app;
   var view;
@@ -55,11 +52,11 @@ function makePlayCanvasController(sceneGeneric) {
       fov: 74,
     });
 
-    app.assets.loadFromUrl('orbit-camera-input-mouse.js', 'script', function (err, asset) {
+    app.assets.loadFromUrl('libs/orbit-camera-input-mouse.js', 'script', function (err, asset) {
       camera.addComponent('script');
       camera.script.create('orbitCameraInputMouse');
 
-      app.assets.loadFromUrl('orbitcamera.js', 'script', function (err, asset) {
+      app.assets.loadFromUrl('libs/orbitcamera.js', 'script', function (err, asset) {
         camera.script.create('orbitCamera');
         camera.script.orbitCamera.frameOnStart = false;
         app.root.addChild(camera);
