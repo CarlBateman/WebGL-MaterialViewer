@@ -1,7 +1,4 @@
-﻿/// <reference path="../../libs/babylon/babylon.js" />
-/// <reference path="scene.js" />
-
-function makeBabylonController(sceneGeneric) {
+﻿function makeBabylonController(sceneGeneric) {
   var glCanvas;
   var view;
   var engine;

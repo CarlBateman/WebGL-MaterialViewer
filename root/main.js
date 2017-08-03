@@ -1,11 +1,4 @@
-﻿/// <reference path="adapter.js" />
-/// <reference path="options.js" />
-/// <reference path="scene.js" />
-/// <reference path="controller-babylon.js" />
-/// <reference path="controller-three.js" />
-/// <reference path="controller-playcanvas.js" />
-
-"use strict"
+﻿"use strict"
 
 window.addEventListener('DOMContentLoaded', function () { main(); });
 

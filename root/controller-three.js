@@ -1,7 +1,4 @@
-﻿/// <reference path="libs/three.js" />
-/// <reference path="scene.js" />
-
-function makeThreeController(sceneGeneric) {
+﻿function makeThreeController(sceneGeneric) {
   var glCanvas;
   var view;
   var renderer;
