@@ -35,7 +35,7 @@
   geometryDefaults["cone"] = [10, 30, 16];
 
   function init() {
-    renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
     glCanvas = renderer.domElement;
     document.getElementById("view").insertBefore(glCanvas, document.getElementById("view").firstChild);
