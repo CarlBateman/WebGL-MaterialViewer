@@ -190,6 +190,10 @@
       material.diffuse.set(...materialValue.diffuse);
       material.emissive.set(...materialValue.emissive);
       material.specular.set(...materialValue.specular);
+      material.fresnelModel = pc.FRESNEL_NONE;
+      material.shadingModel = pc.SPECULAR_PHONG;
+      material.update();
+
       mesh1.model.material = material;
 
       mesh1.setLocalPosition(...item.position);
