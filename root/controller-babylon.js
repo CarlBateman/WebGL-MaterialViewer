@@ -216,15 +216,15 @@
   glCanvas.style.display = "none";
 
   return {
-    clearAll: clearAll,
-    getScene: getScene,
-    setScene: setScene,
-    render: render,
-    add: add,
-    display: display,
-    set: set,
-    setBackground: setBackground,
-    setAmbient: setAmbient,
-    setMaterial: setMaterial,
+    clearAll,
+    getScene,
+    setScene,
+    render,
+    add,
+    display,
+    set,
+    setBackground,
+    setAmbient,
+    setMaterial,
   }
 }
