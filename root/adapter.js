@@ -26,22 +26,8 @@
       }
 
       var keys = Object.keys(currentEngine);
-      for (var i = 0; i < keys.length; i++) {
-        var key = keys[i];
-        this[key] = currentEngine[key];
-      }
 
-      //this.setAmbient = currentEngine.setAmbient;
-      //this.render = currentEngine.render;
-      //this.setBackground = currentEngine.setBackground;
-      //this.setScene = currentEngine.setScene;
-      //this.getScene = currentEngine.getScene;
-      //this.clearAll = currentEngine.clearAll;
-
-      //this.add = currentEngine.add;
-      //this.set = currentEngine.set;
-      //this.remove = currentEngine.remove;
-      //this.replace = currentEngine.replace;
+      keys.map((key) => { this[key] = currentEngine[key]; });
     },
   }
 }
